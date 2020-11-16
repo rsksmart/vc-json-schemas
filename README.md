@@ -67,6 +67,6 @@ Continuos delivery will make new schemas go live instantly. It will use Github P
 
 ## Drawbacks
 
-The schema specification is still a draft so we decided initially to
-- do not include cryptographic proof for these schemas
-- do not publish them in a public ledger
+Verifiable Credentials JSON Schema Specification is still a draft so we decided initially to
+- do not include cryptographic proof for these schemas - as it is not yet defined
+- do not publish them in a public ledger - as it may make this project unflexible to future changes
