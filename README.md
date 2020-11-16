@@ -16,7 +16,7 @@ References:
 
 This repository contains a set of Credential Schemas. These schemes are hosted and available for use by the community. The objective is to provide a standard, reusable and extensible set of schemas that can be used over different applications enabling the portability of user's information.
 
-For example, if a trusted service like [NeverBounce](https://neverbounce.com/) verifies an email and digitally sign a Verifiable Credential complying with a standard schema expressing, the credential can be reused as an email credential over any other application model.
+For example, if a trusted service like [NeverBounce](https://neverbounce.com/) verifies an email and digitally signs a Verifiable Credential complying with a standard schema, the credential can be reused as an email credential over any other application model.
 
 ## The repo
 
