@@ -41,7 +41,7 @@ They must also meet:
 
 Pull requests must meet:
 - Do not modify or delete an existing schema
-- If schema is to be updated, create a new schema with complaint versioning
+- If schema is to be updated, create a new schema with compliant versioning
 
 ### The sample folder
 
@@ -53,7 +53,7 @@ The sample must:
 
 ### CI linting and testing
 
-Continuos integration is set to
+Continuous integration is set to
 
 - Invalidate any schema update or deletion
 - Verify credential schemas format are valid
@@ -63,7 +63,7 @@ Continuos integration is set to
 
 ### CD on Github Pages
 
-Continuos delivery will make new schemas go live instantly. It will use Github Pages host to serve each of the credential schemas definitions approved and merged into `master` branch.
+Continuous delivery will make new schemas go live instantly. It will use Github Pages host to serve each of the credential schemas definitions approved and merged into `master` branch.
 
 ## Drawbacks
 
