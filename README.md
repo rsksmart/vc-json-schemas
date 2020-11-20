@@ -18,6 +18,10 @@ This repository contains a set of Credential Schemas. These schemes are hosted a
 
 For example, if a trusted service like [NeverBounce](https://neverbounce.com/) verifies an email and digitally signs a Verifiable Credential complying with a standard schema, the credential can be reused as an email credential over any other application model.
 
+## Schemas
+
+- [`EmailCredentialSchema`](https://rsksmart.github.io/vc-json-schemas/EmailCredentialSchema/v1.0/schema.json)
+
 ## The repo
 
 The repository has 4 important modules:
