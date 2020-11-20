@@ -1,15 +1,6 @@
 
-const { Resolver } = require('did-resolver')
-const EthrDIDResolver = require('ethr-did-resolver')
+const resolver = require('./didResolver')
 const { createJWT, verifyJWT, SimpleSigner } = require('did-jwt')
-
-const ethrDIDResolver = EthrDIDResolver.getResolver({
-  networks: [
-    { name: 'rsk', rpcUrl: 'https://did.rsk.co:4444' }
-  ]
-})
-
-let resolver = new Resolver(ethrDIDResolver)
 
 const signer = SimpleSigner('9b2431dc63881855a47a9ab500a9f0e1a1f3620d4dfb5267c8c9db94178280ea')
 
