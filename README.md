@@ -5,6 +5,14 @@
 <p align="middle">
   A repository of JSON Schemas for Verifiable Credentials
 </p>
+<p align="middle">
+  <a href="https://github.com/rsksmart/vc-json-schemas/actions?query=workflow%3Aci">
+    <img src="https://github.com/rsksmart/vc-json-schemas/workflows/ci/badge.svg" />
+  </a>
+  <a href="https://github.com/rsksmart/vc-json-schemas/actions?query=workflow%3Acd">
+    <img src="https://github.com/rsksmart/vc-json-schemas/workflows/cd/badge.svg" />
+  </a>
+</p>
 
 The **Credential Schema** is a document that is used to guarantee the structure, and by extension the semantics, of the set of claims comprising a Verifiable Credential. A shared Credential Schema allows all parties to reference data in a known way<sup><a href="https://w3c-ccg.github.io/vc-json-schemas/#overview">1</a></sup>
 
