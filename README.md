@@ -55,11 +55,11 @@ The sample must:
 
 Continuos integration is set to
 
-- Invalidate any schema update or deletion
-- Verify credential schemas format are valid
-- Check spacing is correct
-- Validate the samples against the corresponding schema
-- Versioning is correct
+- [ ] Invalidate any schema update or deletion
+- [x] Verify credential schemas format are valid
+- [ ] Check spacing is correct
+- [x] Validate the samples against the corresponding schema
+- [ ] Versioning is correct
 
 ### CD on Github Pages
 
