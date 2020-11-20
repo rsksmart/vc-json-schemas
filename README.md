@@ -80,23 +80,34 @@ Continuous delivery will make new schemas go live instantly. It will use Github 
 ## Changes to standards
 
 The base schema: is the JSON Schema of the schemas. We made two changes to https://w3c-ccg.github.io/vc-json-schemas/schema/1.0/schema.json:
-- Enable more DID networks in method. `id` pattern is `^did:+(\w+:)+\w+;id=[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12};version=d+.\d+$`, changes `\w+:` for `(\w+:)`.
-- Made `required` property compliant. Changess
-  ```json
-  {
-    "required": {
-      "type": "array",
-      "items": [ {
-        "type": "string" } ] } }
-  ```
-  for
-  ```json
-  {
-    "required": {
-      "type": "array",
-      "items": {
-        "type": "string" } } }
-  ```
+
+**Enable more DID networks in method**
+
+`id` pattern is `^did:+(\w+:)+\w+;id=[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12};version=d+.\d+$`
+
+Changes `\w+:` for `(\w+:)+`
+
+**Made `required` property JSON Schema compliant**
+
+Changes
+
+```json
+{
+  "required": {
+    "type": "array",
+    "items": [ {
+      "type": "string" } ] } }
+```
+
+for
+
+```json
+{
+  "required": {
+    "type": "array",
+    "items": {
+      "type": "string" } } }
+```
 
 ## Drawbacks
 
