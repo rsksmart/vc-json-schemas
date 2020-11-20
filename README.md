@@ -45,7 +45,7 @@ Pull requests must meet:
 
 ### The sample folder
 
-This folder stores sample Verifiable Credentials for each existent schema. The examples of each schema are stored in `/sample/SCHEMA_NAME/SCHEMA_VERSION/sample-K.json`, where `k` is index of the sample enabling more than one sample to be stored for each schema.
+This folder stores sample Verifiable Credentials for each existent schema. The examples of each schema are stored in `/sample/SCHEMA_NAME/SCHEMA_VERSION/sample-K.json`, where `k` is index (starting from 1) of the sample enabling more than one sample to be stored for each schema.
 
 The sample must:
 - Be compliant with the schema specified by the path of the file
@@ -64,6 +64,27 @@ Continuos integration is set to
 ### CD on Github Pages
 
 Continuos delivery will make new schemas go live instantly. It will use Github Pages host to serve each of the credential schemas definitions approved and merged into `master` branch.
+
+## Changes to standards
+
+The base schema: is the JSON Schema of the schemas. We made two changes to https://w3c-ccg.github.io/vc-json-schemas/schema/1.0/schema.json:
+- Enable more DID networks in method. `id` pattern is `^did:+(\w+:)+\w+;id=[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12};version=d+.\d+$`, changes `\w+:` for `(\w+:)`.
+- Made `required` property compliant. Changess
+  ```json
+  {
+    "required": {
+      "type": "array",
+      "items": [ {
+        "type": "string" } ] } }
+  ```
+  for
+  ```json
+  {
+    "required": {
+      "type": "array",
+      "items": {
+        "type": "string" } } }
+  ```
 
 ## Drawbacks
 
