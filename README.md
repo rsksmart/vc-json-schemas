@@ -16,7 +16,7 @@ References:
 
 This repository contains a set of Credential Schemas. These schemes are hosted and available for use by the community. The objective is to provide a standard, reusable and extensible set of schemas that can be used over different applications enabling the portability of user's information.
 
-For example, if a trusted service like [NeverBounce](https://neverbounce.com/) verifies an email and digitally sign a Verifiable Credential complying with a standard schema expressing, the credential can be reused as an email credential over any other application model.
+For example, if a trusted service like [NeverBounce](https://neverbounce.com/) verifies an email and digitally signs a Verifiable Credential complying with a standard schema, the credential can be reused as an email credential over any other application model.
 
 ## The repo
 
@@ -41,7 +41,7 @@ They must also meet:
 
 Pull requests must meet:
 - Do not modify or delete an existing schema
-- If schema is to be updated, create a new schema with complaint versioning
+- If schema is to be updated, create a new schema with compliant versioning
 
 ### The sample folder
 
@@ -53,7 +53,7 @@ The sample must:
 
 ### CI linting and testing
 
-Continuos integration is set to
+Continuous integration is set to
 
 - [ ] Invalidate any schema update or deletion
 - [x] Verify credential schemas format are valid
@@ -63,7 +63,7 @@ Continuos integration is set to
 
 ### CD on Github Pages
 
-Continuos delivery will make new schemas go live instantly. It will use Github Pages host to serve each of the credential schemas definitions approved and merged into `master` branch.
+Continuous delivery will make new schemas go live instantly. It will use Github Pages host to serve each of the credential schemas definitions approved and merged into `master` branch.
 
 ## Changes to standards
 
@@ -88,6 +88,6 @@ The base schema: is the JSON Schema of the schemas. We made two changes to https
 
 ## Drawbacks
 
-The schema specification is still a draft so we decided initially to
-- do not include cryptographic proof for these schemas
-- do not publish them in a public ledger
+Verifiable Credentials JSON Schema Specification is still a draft so we decided initially to
+- do not include cryptographic proof for these schemas - as it is not yet defined
+- do not publish them in a public ledger - as it may make this project unflexible to future changes
