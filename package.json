@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "A repository of JSON Schemas for Verifiable Credentials",
   "main": "base-schema.js",
+  "files": [
+    "base-schema.js",
+    "schema/",
+    "!schema/index.html"
+  ],
   "dependencies": {
     "ajv": "^7.0.0-beta.6",
     "did-jwt": "^4.6.3",
