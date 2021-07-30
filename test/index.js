@@ -25,6 +25,7 @@ const fixture = {
 
 const test = async () => {
   for (let schemaName of Object.keys(fixture)) {
+    console.log('Testing', schemaName)
     const { schema, sample } = fixture[schemaName]
 
     const emailCredentialSchema = JSON.parse(fs.readFileSync(path.resolve(__dirname, schema)))
