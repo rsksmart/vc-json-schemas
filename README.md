@@ -32,6 +32,7 @@ For example, if a trusted service like [NeverBounce](https://neverbounce.com/) v
 ## Schemas
 
 - [`EmailCredentialSchema`](https://rsksmart.github.io/vc-json-schemas/EmailCredentialSchema/v1.0/schema.json)
+- [`PhoneCredentialSchema`](https://rsksmart.github.io/vc-json-schemas/PhoneCredentialSchema/v1.0/schema.json)
 
 ## The repo
 

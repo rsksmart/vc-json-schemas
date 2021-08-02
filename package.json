@@ -1,6 +1,6 @@
 {
   "name": "@rsksmart/vc-json-schemas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A repository of JSON Schemas for Verifiable Credentials",
   "main": "base-schema.js",
   "dependencies": {
