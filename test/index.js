@@ -1,6 +1,4 @@
 const assert = require('assert')
-const fs = require('fs')
-const path = require('path')
 const Ajv = require('ajv').default
 const { verifyJWT } = require('did-jwt')
 const resolver = require('../util/didResolver')
@@ -14,12 +12,12 @@ const validateBaseSchema = ajv.compile(vcJSONSchema)
 
 const fixture = {
   'Email': {
-    schema: '../schema/EmailCredentialSchema/v1.0/schema.json',
-    sample: '../sample/EmailCredentialSchema/v1.0/sample-1'
+    schema: require("../schema/EmailCredentialSchema/v1.0/schema.json"),
+    sample: require("../sample/EmailCredentialSchema/v1.0/sample-1.json")
   },
   'Phone': {
-    schema: '../schema/PhoneCredentialSchema/v1.0/schema.json',
-    sample: '../sample/PhoneCredentialSchema/v1.0/sample-1'
+    schema: require('../schema/PhoneCredentialSchema/v1.0/schema.json'),
+    sample: require('../sample/PhoneCredentialSchema/v1.0/sample-1.json')
   }
 }
 
@@ -27,12 +25,13 @@ const test = async () => {
   for (let schemaName of Object.keys(fixture)) {
     console.log('Testing', schemaName)
     const { schema, sample } = fixture[schemaName]
-
-    const credentialSchema = JSON.parse(fs.readFileSync(path.resolve(__dirname, schema)))
+    console.log("schema: ", schema);
+    const credentialSchema = schema; //JSON.parse(fs.readFileSync(path.resolve(__dirname, schema)))
     assert(validateBaseSchema(credentialSchema), `${schemaName} Credential Schema not compliant with VC JSON Schemas v1.0`)
 
     const validateSchema = ajv.compile(credentialSchema.schema)
-    const sampleCredentialJWT = fs.readFileSync(path.resolve(__dirname, sample)).toString()
+    const sampleCredentialJWT = sample.sample.toString(); //fs.readFileSync(path.resolve(__dirname, sample)).toString()
+    console.log("sampleCredential")
     await verifyJWT(sampleCredentialJWT, { resolver })
       .then(({ payload }) => validateSchema(payload.credentialSubject))
   }

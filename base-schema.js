@@ -65,8 +65,6 @@ module.exports = {
     "modelVersion",
     "id",
     "name",
-    "author",
-    "authored",
     "schema"
   ]
 }
