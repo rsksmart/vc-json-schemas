@@ -9,7 +9,9 @@
     "did-resolver": "^2.1.1",
     "ethr-did-resolver": "3.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "ajv-formats": "^2.1.1"
+  },
   "scripts": {
     "test": "node test/index.js"
   },

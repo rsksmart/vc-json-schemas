@@ -2,8 +2,10 @@ const assert = require('assert')
 const Ajv = require('ajv').default
 const { verifyJWT } = require('did-jwt')
 const resolver = require('../util/didResolver')
+const addFormats = require('ajv-formats')
 
 const ajv = new Ajv()
+addFormats(ajv)
 
 // Assert Schemas are Base Schema complaint
 const vcJSONSchema = require('../base-schema')
@@ -18,6 +20,9 @@ const fixture = {
   'Phone': {
     schema: require('../schema/PhoneCredentialSchema/v1.0/schema.json'),
     sample: require('../sample/PhoneCredentialSchema/v1.0/sample-1.json')
+  },
+  'Profile': {
+    schema: require('../schema/ProfileCredentialSchema/v1.0/schema.json')
   }
 }
 
@@ -30,10 +35,14 @@ const test = async () => {
     assert(validateBaseSchema(credentialSchema), `${schemaName} Credential Schema not compliant with VC JSON Schemas v1.0`)
 
     const validateSchema = ajv.compile(credentialSchema.schema)
-    const sampleCredentialJWT = sample.sample.toString(); //fs.readFileSync(path.resolve(__dirname, sample)).toString()
-    console.log("sampleCredential")
-    await verifyJWT(sampleCredentialJWT, { resolver })
-      .then(({ payload }) => validateSchema(payload.credentialSubject))
+    if (sample) {
+      const sampleCredentialJWT = sample.sample.toString(); //fs.readFileSync(path.resolve(__dirname, sample)).toString()
+      console.log("sampleCredential")
+      await verifyJWT(sampleCredentialJWT, { resolver })
+        .then(({ payload }) => validateSchema(payload.credentialSubject))
+    } else {
+      console.log("no sample found for schema")
+    }
   }
 }
 
