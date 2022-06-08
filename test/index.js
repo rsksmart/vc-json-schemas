@@ -31,12 +31,11 @@ const test = async () => {
     console.log('Testing', schemaName)
     const { schema, sample } = fixture[schemaName]
     console.log("schema: ", schema);
-    const credentialSchema = schema; //JSON.parse(fs.readFileSync(path.resolve(__dirname, schema)))
-    assert(validateBaseSchema(credentialSchema), `${schemaName} Credential Schema not compliant with VC JSON Schemas v1.0`)
+    assert(validateBaseSchema(schema), `${schemaName} Credential Schema not compliant with VC JSON Schemas v1.0`)
 
-    const validateSchema = ajv.compile(credentialSchema.schema)
+    const validateSchema = ajv.compile(schema.schema)
     if (sample) {
-      const sampleCredentialJWT = sample.sample.toString(); //fs.readFileSync(path.resolve(__dirname, sample)).toString()
+      const sampleCredentialJWT = sample.sample.toString();
       console.log("sampleCredential")
       await verifyJWT(sampleCredentialJWT, { resolver })
         .then(({ payload }) => validateSchema(payload.credentialSubject))
