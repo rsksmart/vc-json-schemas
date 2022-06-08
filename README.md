@@ -33,6 +33,7 @@ For example, if a trusted service like [NeverBounce](https://neverbounce.com/) v
 
 - [`EmailCredentialSchema`](https://veramolabs.github.io/vc-json-schemas/EmailCredentialSchema/v1.0/schema.json)
 - [`PhoneCredentialSchema`](https://veramolabs.github.io/vc-json-schemas/PhoneCredentialSchema/v1.0/schema.json)
+- [`ProfileCredentialSchema`](https://veramolabs.github.io/vc-json-schemas/ProfileCredentialSchema/v1.0/schema.json)
 
 ## The repo
 
