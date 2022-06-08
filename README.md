@@ -6,11 +6,11 @@
   A repository of JSON Schemas for Verifiable Credentials
 </p>
 <p align="middle">
-  <a href="https://github.com/rsksmart/vc-json-schemas/actions?query=workflow%3Aci">
-    <img src="https://github.com/rsksmart/vc-json-schemas/workflows/ci/badge.svg" />
+  <a href="https://github.com/veramolabs/vc-json-schemas/actions?query=workflow%3Aci">
+    <img src="https://github.com/veramolabs/vc-json-schemas/workflows/ci/badge.svg" />
   </a>
-  <a href="https://github.com/rsksmart/vc-json-schemas/actions?query=workflow%3Acd">
-    <img src="https://github.com/rsksmart/vc-json-schemas/workflows/cd/badge.svg" />
+  <a href="https://github.com/veramolabs/vc-json-schemas/actions?query=workflow%3Acd">
+    <img src="https://github.com/veramolabs/vc-json-schemas/workflows/cd/badge.svg" />
   </a>
   <a href="https://badge.fury.io/js/%40rsksmart%2Fvc-json-schemas">
     <img src="https://badge.fury.io/js/%40rsksmart%2Fvc-json-schemas.svg" alt="npm" />
@@ -31,8 +31,9 @@ For example, if a trusted service like [NeverBounce](https://neverbounce.com/) v
 
 ## Schemas
 
-- [`EmailCredentialSchema`](https://rsksmart.github.io/vc-json-schemas/EmailCredentialSchema/v1.0/schema.json)
-- [`PhoneCredentialSchema`](https://rsksmart.github.io/vc-json-schemas/PhoneCredentialSchema/v1.0/schema.json)
+- [`EmailCredentialSchema`](https://veramolabs.github.io/vc-json-schemas/EmailCredentialSchema/v1.0/schema.json)
+- [`PhoneCredentialSchema`](https://veramolabs.github.io/vc-json-schemas/PhoneCredentialSchema/v1.0/schema.json)
+- [`ProfileCredentialSchema`](https://veramolabs.github.io/vc-json-schemas/ProfileCredentialSchema/v1.0/schema.json)
 
 ## The repo
 
@@ -79,7 +80,7 @@ Continuous integration is set to
 
 ### CD on Github Pages
 
-Continuous delivery will make new schemas go live instantly. It will use Github Pages host to serve each of the credential schemas definitions approved and merged into `master` branch.
+Continuous delivery will make new schemas go live instantly. It will use Github Pages host to serve each of the credential schemas definitions approved and merged into `main` branch.
 
 ## Changes to standards
 
@@ -87,7 +88,7 @@ The base schema: is the JSON Schema of the schemas. We made two changes to https
 
 **Enable more DID networks in method**
 
-`id` pattern is `^did:+(\w+:)+\w+;id=[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12};version=d+.\d+$`
+`id` pattern is `^did:+(\w+:)+[\w\.]+;id=[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12};version=d+.\d+$`
 
 Changes `\w+:` for `(\w+:)+`
 
