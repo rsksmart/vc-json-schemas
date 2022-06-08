@@ -1,21 +1,23 @@
 {
-  "name": "@rsksmart/vc-json-schemas",
-  "version": "1.0.1",
+  "name": "@veramolabs/vc-json-schemas",
+  "version": "1.0.2",
   "description": "A repository of JSON Schemas for Verifiable Credentials",
   "main": "base-schema.js",
   "dependencies": {
     "ajv": "^7.0.0-beta.6",
     "did-jwt": "^4.6.3",
     "did-resolver": "^2.1.1",
-    "ethr-did-resolver": "^3.0.1"
+    "ethr-did-resolver": "3.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "ajv-formats": "^2.1.1"
+  },
   "scripts": {
     "test": "node test/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rsksmart/vc-json-schemas.git"
+    "url": "git+https://github.com/veramolabs/vc-json-schemas.git"
   },
   "keywords": [
     "did",
@@ -26,7 +28,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rsksmart/vc-json-schemas/issues"
+    "url": "https://github.com/veramolabs/vc-json-schemas/issues"
   },
-  "homepage": "https://github.com/rsksmart/vc-json-schemas#readme"
+  "homepage": "https://github.com/veramolabs/vc-json-schemas#readme"
 }

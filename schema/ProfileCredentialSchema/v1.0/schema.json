@@ -1,0 +1,29 @@
+{
+  "type": "https://w3c-ccg.github.io/vc-json-schemas/schema/1.0/schema.json",
+  "modelVersion": "1.0",
+  "id": "did:web:veramo.io;id=62a8ca5d-7e78-4e7b-a2c1-0bf2d37437ad;version=1.0",
+  "name": "ProfileCredentialSchema",
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ProfileSchema",
+    "description": "ProfileSchema is used to define profiles for DIDs ",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "minLength": 4,
+        "maxLength": 48
+      },
+      "bio": {
+        "type": "string",
+        "maxLength": 500
+      },
+      "avatar": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "required": ["name"],
+    "additionalProperties": true
+  }
+}

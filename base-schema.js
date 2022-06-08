@@ -11,7 +11,7 @@ module.exports = {
     },
     "id": {
       "type": "string",
-      "pattern": "^did:+(\\w+:)+\\w+;id=[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12};version=\\d+.\\d+$"
+      "pattern": "^did:+(\\w+:)+[\\w\\.]+;id=[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12};version=\\d+.\\d+$"
     },
     "name": {
       "type": "string"
@@ -65,8 +65,6 @@ module.exports = {
     "modelVersion",
     "id",
     "name",
-    "author",
-    "authored",
     "schema"
   ]
 }
