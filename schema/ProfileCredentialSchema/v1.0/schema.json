@@ -1,7 +1,7 @@
 {
   "type": "https://w3c-ccg.github.io/vc-json-schemas/schema/1.0/schema.json",
   "modelVersion": "1.0",
-  "id": "did:ethr:rsk:0x8a32da624dd9fad8bf4f32d9456f374b60d9ad28;id=1eb2af6b-0dee-6090-cb55-0ed093f9b026;version=1.0",
+  "id": "did:web:veramo.io;id=62a8ca5d-7e78-4e7b-a2c1-0bf2d37437ad;version=1.0",
   "name": "ProfileCredentialSchema",
   "schema": {
     "$schema": "http://json-schema.org/draft-07/schema#",
